@@ -6,10 +6,8 @@ class ATM:
     self.currencies=[100, 50, 10, 5,4,3,2,1]
 
   def greeting(self):
-    print('Wellcom to {0} Bank'.format(self.bank_name))
-
-  def get_currentbalance(self):
-    print('your balance >>', self.balance)
+    print('Wellcom to {0} Bank'.format(self.bank_name
+	print('your balance >>', self.balance)
 
   def check_balance(self, request):
     if not(self.balance > request) :
@@ -23,7 +21,6 @@ class ATM:
 
   def withdraw(self, request):
     self.greeting()
-    self.get_currentbalance()
     if (self.check_balance(request)):
       self.withdrawals_log.append(request)
       self.balance -= request
